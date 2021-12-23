@@ -86,7 +86,7 @@ class Tick {
     context.scale(this.scale.x, this.scale.y)
 
     context.beginPath()
-    context.rect(-this.width * 0.5, this.yOffset, this.width, this.height)
+    context.rect(-this.width * 0.5 + (Math.random() > 0.995 ? random.range(-20, 20) : 0), this.yOffset + (Math.random() > 0.995 ? random.range(-20, 20) : 0), this.width, this.height)
     context.fill()
     context.restore()
   }
